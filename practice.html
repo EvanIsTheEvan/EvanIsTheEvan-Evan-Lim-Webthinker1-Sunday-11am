@@ -1,10 +1,89 @@
-<!DOCTYPE html>
-<html lang="en-SG">
+<html>
   <head>
-  	<meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width"/>
-    <link href="/script/practice.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="script/jquery.min.js"></script>
+    <link src="script/bootstrap.css">
+    </link>
+  
+    <link href="script/bootstrap.css" rel="stylesheet">
+    <link href="script/aboutus.css" rel="stylesheet">
+
   </head>
-  <body>
-  </body>
+    </head>
+    <body>
+      <form>
+        <form>
+          <label for="phone number">Phone Number</label>
+          <input type="number" id="userphonenumber" placeholder="Type in your Phone Number" class="form-control">
+          <p id="phoneNumberError" class="text-danger d-none"> Field cannot be left blank.</p>
+          <div>
+            <button type="button" class="btn btn-primary" onclick="validate()">Submit</button>
+          </div>
+        </form>
+        <script>
+          const validate = () => {
+            let usernumber = document.getElementById("userphonenumber").value.length;
+            console.log (usernumber);
+            if (usernumber == 0) {
+              document.getElementById("userphonenumber").classList = "form-control is-invalid";
+              document.getElementById("phoneNumberError").classList = "text-danger";
+          }
+            if (usernumber !=0) {
+              document.getElementById("userphonenumber").classList = "form-control";
+              document.getElementById("phoneNumberError").classList = "text-danger d-none";
+            }
+        }
+        </script>
+        <ul class="nav nav-pills">
+          <li class ="nav-item">
+            <button class=" nav-link rounded-pill active" data-bs-toggle="pill" data-bs-target="#scratch">Scratch Projects</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link rounded-pill" data-bs-toggle ="pill" data-bs-target="#canvas">HTML Canvas</button>
+          </li>
+          
+        </ul>
+    </body>
+  
+
+  <!-- <div class="p-5">
+    <div class="row">
+      <div class="col">
+        <div>
+          <label for="fname">First Name</label>
+        </div>
+        <div>
+          <input type="text" id="FirstName" name="fName" placeholder= "Type your first name" class="form-control"/>
+        </div>
+      </div>
+      <div class="col">
+        <div>
+        <label for="lName">Last Name</label>
+        </div>
+        <div>
+        <input type="text" id="LastName" name="lName" placeholder= "Type your last name" class="form-control" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div> <label for="Contact">Contact</label>
+          </div>
+          <div>
+            <input type="text" id="Contact" name="Contact" placeholder= "Type your Contact" class="form-control"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div> <label for="Email">Email</label>
+          </div>
+          <div>
+            <input type="text" id"Email" name="Email" placeholder= "Type your Email" class="form-control"/>
+          </div>
+        </div>
+      </div> -->
+
+
+  
 </html>
